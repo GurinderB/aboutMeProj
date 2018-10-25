@@ -48,10 +48,10 @@ else {
   alert('It was an easy guess!');
 }
 
-//  Sixsth question.
+//  Sixth question.
 var guessNum = parseInt(prompt('Guess how many years I have been in U.S.! It is between 8 - 20 years. You only get 4 tries'));
 console.log('To check if the input was parsed to integer');
-var counter = parseInt('1');
+var counter = 1;
 while (guessNum !== 12 && counter < 4) {
   if (guessNum < 12) {
     guessNum = parseInt(prompt('Your guess is low, guess again'));
@@ -76,8 +76,8 @@ var guessCountry = prompt('Guess the countries I have visited other than India o
 console.log('To check if the input was converted to uppercase', guessCountry);
 var countryVis = ['NETHERLAND', 'CYPRUS', 'BELGIUM'];
 var correct = false;
-var counter = 0
-while (counter <= 5) {
+var counter2 = 0;
+while (counter2 <= 5) {
   for (var i = 0; i <= countryVis.length; i++) {
     if (guessCountry === countryVis[i]) {
       correct = true;
@@ -89,10 +89,10 @@ while (counter <= 5) {
   }
   else {
     guessCountry = prompt(' Wrong guess, try again. You get to try for 7 time total.').toLocaleUpperCase();
-    counter++;
+    counter2++;
   }
 }
-if (counter === 6) {
+if (counter2 === 6) {
   alert('You are out of tries');
 }
 
