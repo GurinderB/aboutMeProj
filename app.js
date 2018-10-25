@@ -57,26 +57,49 @@ function guessJob() {
 }
 guessJob();
 //  Sixsth question.
-var guessNum = parseInt(prompt('Guess how many years I have been in U.S.! It is between 8 - 20 years. You only get 4 tries'));
-console.log('To check if the input was parsed to integer');
-var counter = parseInt('1');
-while (guessNum !== 12 && counter < 4) {
-  if (guessNum < 12) {
-    guessNum = parseInt(prompt('Your guess is low, guess again'));
-    counter++;
-  }
-  else if (guessNum > 12) {
-    guessNum = parseInt(prompt('Your guess is High, guess again'));
-    counter++;
-  }
+// var guessNum = parseInt(prompt('Guess how many years I have been in U.S.! It is between 8 - 20 years. You only get 4 tries'));
+// console.log('To check if the input was parsed to integer');
+// var counter = parseInt('1');
+// while (guessNum !== 12 && counter < 4) {
+//   if (guessNum < 12) {
+//     guessNum = parseInt(prompt('Your guess is low, guess again'));
+//     counter++;
+//   }
+//   else if (guessNum > 12) {
+//     guessNum = parseInt(prompt('Your guess is High, guess again'));
+//     counter++;
+//   }
 
+// }
+// if (guessNum === 12) {
+//   alert('Good guess! I can\'t believe I have been in United States for ' + guessNum + ' years.');
+// }
+// else {
+//   alert('You are out of tries!');
+// }
+function guessNumber() {
+  var guessNum = parseInt(prompt('Guess how many years I have been in U.S.! It is between 8 - 20 years. You only get 4 tries'));
+  console.log('To check if the input was parsed to integer');
+  var counter = 1;
+  while (guessNum !== 12 && counter < 4) {
+    if (guessNum < 12) {
+      return guessNum = parseInt(prompt('Your guess is low, guess again'));
+      counter++;
+    }
+    else if (guessNum > 12) {
+      return guessNum = parseInt(prompt('Your guess is High, guess again'));
+      counter++;
+    }
+
+  }
+  if (guessNum === 12) {
+    return alert('Good guess! I can\'t believe I have been in United States for ' + guessNum + ' years.');
+  }
+  else {
+    return alert('You are out of tries!');
+  }
 }
-if (guessNum === 12) {
-  alert('Good guess! I can\'t believe I have been in United States for ' + guessNum + ' years.');
-}
-else {
-  alert('You are out of tries!');
-}
+guessNumber();
 
 //Seventh question
 
