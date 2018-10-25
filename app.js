@@ -57,38 +57,18 @@ function guessJob() {
 }
 guessJob();
 //  Sixsth question.
-// var guessNum = parseInt(prompt('Guess how many years I have been in U.S.! It is between 8 - 20 years. You only get 4 tries'));
-// console.log('To check if the input was parsed to integer');
-// var counter = parseInt('1');
-// while (guessNum !== 12 && counter < 4) {
-//   if (guessNum < 12) {
-//     guessNum = parseInt(prompt('Your guess is low, guess again'));
-//     counter++;
-//   }
-//   else if (guessNum > 12) {
-//     guessNum = parseInt(prompt('Your guess is High, guess again'));
-//     counter++;
-//   }
-
-// }
-// if (guessNum === 12) {
-//   alert('Good guess! I can\'t believe I have been in United States for ' + guessNum + ' years.');
-// }
-// else {
-//   alert('You are out of tries!');
-// }
 function guessNumber() {
   var guessNum = parseInt(prompt('Guess how many years I have been in U.S.! It is between 8 - 20 years. You only get 4 tries'));
   console.log('To check if the input was parsed to integer');
   var counter = 1;
   while (guessNum !== 12 && counter < 4) {
     if (guessNum < 12) {
-      return guessNum = parseInt(prompt('Your guess is low, guess again'));
       counter++;
+      return guessNum = parseInt(prompt('Your guess is low, guess again'));
     }
     else if (guessNum > 12) {
-      return guessNum = parseInt(prompt('Your guess is High, guess again'));
       counter++;
+      return guessNum = parseInt(prompt('Your guess is High, guess again'));
     }
 
   }
@@ -102,28 +82,29 @@ function guessNumber() {
 guessNumber();
 
 //Seventh question
-
-var guessCountry = prompt('Guess the countries I have visited other than India or U.S.!').toLocaleUpperCase();
-console.log('To check if the input was converted to uppercase', guessCountry);
-var countryVis = ['NETHERLAND', 'CYPRUS', 'BELGIUM'];
-var correct = false;
-var counter2 = 0;
-while (counter2 <= 5) {
-  for (var i = 0; i <= countryVis.length; i++) {
-    if (guessCountry === countryVis[i]) {
-      correct = true;
+function guessMyCountry() {
+  var guessCountry = prompt('Guess the countries I have visited other than India or U.S.!').toLocaleUpperCase();
+  console.log('To check if the input was converted to uppercase', guessCountry);
+  var countryVis = ['NETHERLAND', 'CYPRUS', 'BELGIUM'];
+  var correct = false;
+  var counter2 = 0;
+  while (counter2 <= 5) {
+    for (var i = 0; i <= countryVis.length; i++) {
+      if (guessCountry === countryVis[i]) {
+        correct = true;
+      }
+    }
+    if (correct === true) {
+      alert('Good guess!');
+      break;
+    }
+    else {
+      guessCountry = prompt(' Wrong guess, try again. You get to try for 7 time total.').toLocaleUpperCase();
+      counter2++;
     }
   }
-  if (correct === true) {
-    alert('Good guess!');
-    break;
-  }
-  else {
-    guessCountry = prompt(' Wrong guess, try again. You get to try for 7 time total.').toLocaleUpperCase();
-    counter2++;
+  if (counter2 === 6) {
+    alert('You are out of tries');
   }
 }
-if (counter2 === 6) {
-  alert('You are out of tries');
-}
-
+guessMyCountry();
