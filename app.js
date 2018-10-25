@@ -55,6 +55,7 @@ function guessJob() {
     return alert('It was an easy guess!');
   }
 }
+
 guessJob();
 //  Sixsth question.
 function guessNumber() {
@@ -70,6 +71,7 @@ function guessNumber() {
       counter++;
       return guessNum = parseInt(prompt('Your guess is High, guess again'));
     }
+guessNumber();
 
   }
   if (guessNum === 12) {
@@ -82,6 +84,7 @@ function guessNumber() {
 guessNumber();
 
 //Seventh question
+
 function guessMyCountry() {
   var guessCountry = prompt('Guess the countries I have visited other than India or U.S.!').toLocaleUpperCase();
   console.log('To check if the input was converted to uppercase', guessCountry);
