@@ -1,0 +1,37 @@
+header {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    text-align: center;
+    box-sizing: outline;
+    height: 150px;
+}
+body {
+    background-color: rgb(78, 138, 216);
+    box-sizing: outline;
+}
+h1 {
+    color: rgb(5, 5, 133);
+    text-align: left;
+    box-sizing: outline;
+}
+
+h2 {
+    color: rgb(3, 3, 68);
+    text-decoration: underline;
+    box-sizing: outline;
+}
+
+.aboutme {
+    text-align: left;
+    text-decoration: none;
+    box-sizing: outline;
+}
+
+ul {
+    border: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-right: auto;
+    max-width: 400px;
+    box-sizing: outline;
+}
